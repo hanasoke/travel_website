@@ -1,36 +1,316 @@
-<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Hana Travel</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">✈️ TravelXplore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#destinations">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#packages">Packages</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#testimonials">Reviews</a></li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-warning text-dark fw-bold px-4 py-2" href="#booking">Book Now</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
+
+<!-- Hero Section with Video Background -->
+<section id="home" class="hero-section d-flex align-items-center text-white">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="travel.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">Your Dream Vacation<br>Starts Here</h1>
+                <p class="lead fs-3 mb-5 animate__animated animate__fadeInUp">Discover breathtaking destinations with exclusive deals. Up to 50% OFF on premium packages!</p>
+                <div class="d-flex flex-column flex-lg-row gap-3 justify-content-center animate__animated animate__fadeInUp">
+                    <a href="#booking" class="btn btn-warning btn-lg px-5 py-3 fw-bold fs-4 shadow-lg">🚀 Find Deals</a>
+                    <a href="#destinations" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold fs-4">🌍 Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Booking Section -->
+<section id="booking" class="bg-white py-5 shadow-lg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-lg rounded-5 p-4">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-lg-3">
+                            <label class="form-label fw-bold fs-6">🗺️ Destination</label>
+                            <select class="form-select form-select-lg">
+                                <option>Bali, Indonesia</option>
+                                <option>Paris, France</option>
+                                <option>Tokyo, Japan</option>
+                                <option>New York, USA</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label fw-bold fs-6">📅 Check-in</label>
+                            <input type="date" class="form-control form-control-lg">
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label fw-bold fs-6">📅 Check-out</label>
+                            <input type="date" class="form-control form-control-lg">
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label fw-bold fs-6">👥 Guests</label>
+                            <select class="form-select form-select-lg">
+                                <option>2 Adults</option>
+                                <option>4 Adults</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <button class="btn btn-warning w-100 btn-lg fw-bold fs-5 shadow">🔍 Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations Section -->
+<section id="destinations" class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Popular Destinations</h2>
+            <p class="lead col-lg-6 mx-auto">Choose your perfect getaway from our top destinations</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="destination-card">
+                    <img src="pictures/bali.jpg" class="dest-img" alt="Bali" style="object-fit: cover;">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-bold mb-0">Bali Paradise</h5>
+                            <span class="badge bg-warning text-dark fw-bold">Trending</span>
+                        </div>
+                        <p class="text-muted mb-3">Beach paradise with culture & adventure</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-bold text-warning">from $299</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="destination-card">
+                    <img src="pictures/new_york.jpg" class="dest-img" alt="Paris">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2">New York</h5>
+                        <p class="text-muted mb-3">City of Working & Business</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-bold text-warning">from $599</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="destination-card">
+                    <img src="pictures/paris.jpg" class="dest-img" alt="Paris">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2">Paris Romance</h5>
+                        <p class="text-muted mb-3">City of lights and love awaits</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-bold text-warning">from $599</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="destination-card">
+                    <img src="pictures/tokyo.jpg" class="dest-img" alt="Tokyo">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-2">Tokyo Adventure</h5>
+                        <p class="text-muted mb-3">Modern culture meets ancient tradition</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-bold text-warning">from $799</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Packages Section -->
+<section id="packages" class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Hot Deals & Packages</h2>
+            <p class="lead col-lg-6 mx-auto mb-5">Limited time offers - Book now and save big!</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card border-0 shadow-lg h-100">
+                    <div class="card-img-top" style="height: 200px; background: linear-gradient(45deg, #ff6b6b, #feca57); display: flex; align-items: center; justify-content: center;">
+                        <span class="display-4">🏖️</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Bali All-Inclusive</h5>
+                        <p class="card-text text-muted">7 nights luxury resort + flights</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="h4 fw-bold text-warning">$1,299</span>
+                            <small class="text-muted"><s>$1,999</s> <strong>35% OFF</strong></small>
+                        </div>
+                        <button class="btn btn-warning w-100 fw-bold">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card border-0 shadow-lg h-100">
+                    <div class="card-img-top" style="height: 200px; background: linear-gradient(45deg, #a8edea, #fed6e3); display: flex; align-items: center; justify-content: center;">
+                        <span class="display-4">🗼</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Paris Romantic</h5>
+                        <p class="card-text text-muted">5 nights + Eiffel Tower dinner</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="h4 fw-bold text-warning">$899</span>
+                            <small class="text-muted"><s>$1,399</s> <strong>36% OFF</strong></small>
+                        </div>
+                        <button class="btn btn-warning w-100 fw-bold">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card border-0 shadow-lg h-100">
+                    <div class="card-img-top" style="height: 200px; background: linear-gradient(45deg, #ff9a9e, #fecfef); display: flex; align-items: center; justify-content: center;">
+                        <span class="display-4">🏯</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Tokyo Premium</h5>
+                        <p class="card-text text-muted">6 nights + Mt. Fuji tour</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="h4 fw-bold text-warning">$1,499</span>
+                            <small class="text-muted"><s>$2,199</s> <strong>32% OFF</strong></small>
+                        </div>
+                        <button class="btn btn-warning w-100 fw-bold">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Happy Travelers</h2>
+            <p class="lead col-lg-6 mx-auto">Don't just take our word for it</p>
+        </div>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <img src="travel.mp4" class="rounded-circle mx-auto mb-4 shadow-lg" width="120" height="120" alt="Traveler" style="object-fit: cover;">
+                            <blockquote class="blockquote fs-4 mb-4">"Best travel experience ever! Bali package was amazing - exceeded all expectations!"</blockquote>
+                            <div class="h5 fw-bold text-warning">Sarah L.</div>
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <img src="travel.mp4" class="rounded-circle mx-auto mb-4 shadow-lg" width="120" height="120" alt="Traveler" style="object-fit: cover;">
+                            <blockquote class="blockquote fs-4 mb-4">"Professional service from start to finish. Highly recommend TravelXplore!"</blockquote>
+                            <div class="h5 fw-bold text-warning">Mike Chen</div>
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-padding bg-warning text-dark">
+    <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-4">Ready for Your Next Adventure?</h2>
+        <p class="lead fs-3 mb-5 col-lg-8 mx-auto">Limited spots available - Book today and save up to 50%!</p>
+        <a href="#booking" class="btn btn-dark btn-lg px-6 py-3 fs-4 fw-bold shadow-lg">🚀 Book Your Dream Trip</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h5 class="fw-bold mb-3">✈️ TravelXplore</h5>
+                <p>Your trusted partner for unforgettable travel experiences worldwide.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="bi bi-facebook text-white-50 fs-4"></a>
+                    <a href="#" class="bi bi-instagram text-white-50 fs-4"></a>
+                    <a href="#" class="bi bi-twitter text-white-50 fs-4"></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="fw-bold mb-3">Destinations</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50 text-decoration-none">Asia</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Europe</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">America</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h6 class="fw-bold mb-3">Support</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50 text-decoration-none">24/7 Help</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <h6 class="fw-bold mb-3">Contact Info</h6>
+                <p><i class="bi bi-telephone me-2"></i>+62 812-3456-7890</p>
+                <p><i class="bi bi-envelope me-2"></i>hello@travelxplore.com</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p>&copy; 2026 TravelXplore. All rights reserved | Terms | Privacy</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/6285773457585" class="floating-btn" target="_blank" title="Chat WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>

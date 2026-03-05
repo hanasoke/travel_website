@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-gold: #f59e0b;
+    --dark-gold: #d97706;
+    --accent-blue: #0ea5e9;
+    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+}
+
+.navbar { 
+    background: rgba(255,255,255,0.98); 
+    backdrop-filter: blur(20px); 
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1); 
+}
+
+.hero-section { 
+    background: var(--gradient-hero);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.hero-content { 
+    position: relative; 
+    z-index: 3; 
+}
+
+.destination-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.destination-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+.dest-img { 
+    height: 350px; 
+    object-fit: cover; 
+}
+
+.package-card { 
+    border-radius: 15px; 
+    transition: all 0.3s; 
+}
+
+.package-card:hover { 
+    transform: scale(1.05); 
+}
+
+.testimonial-carousel .carousel-item { 
+    height: 400px; 
+}
+
+.section-padding { 
+    padding: 100px 0; 
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-gold);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgba(245,158,11,0.4);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(245,158,11,0.7); 
+    }
+
+    70% { 
+        box-shadow: 0 0 0 20px rgba(245,158,11,0); 
+    }
+
+    100% { 
+        box-shadow: 0 0 0 0 rgba(245,158,11,0); 
+    }
+}
